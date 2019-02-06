@@ -6,7 +6,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/nadoo/glider/common/log"
+	"github.com/DBHeise/glider/common/log"
 	"github.com/nadoo/glider/dns"
 	"github.com/nadoo/glider/ipset"
 	"github.com/nadoo/glider/proxy"

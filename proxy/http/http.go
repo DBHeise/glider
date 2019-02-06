@@ -16,8 +16,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/DBHeise/glider/common/log"
 	"github.com/nadoo/glider/common/conn"
-	"github.com/nadoo/glider/common/log"
 	"github.com/nadoo/glider/proxy"
 )
 
