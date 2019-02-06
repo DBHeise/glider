@@ -30,6 +30,12 @@ var conf struct {
 	DNSConfig dns.Config
 
 	rules []*rule.Config
+
+	ES struct {
+		URL   string
+		Index string
+		Type  string
+	}
 }
 
 func confInit() {
@@ -54,6 +60,10 @@ func confInit() {
 	flag.IntVar(&conf.DNSConfig.MaxTTL, "dnsmaxttl", 1800, "maximum TTL value for entries in the CACHE(seconds)")
 	flag.IntVar(&conf.DNSConfig.MinTTL, "dnsminttl", 0, "minimum TTL value for entries in the CACHE(seconds)")
 	flag.StringSliceUniqVar(&conf.DNSConfig.Records, "dnsrecord", nil, "custom dns record, format: domain/ip")
+
+	flag.StringVar(&conf.ES.URL, "esurl", "http://localhost:9200", "")
+	flag.StringVar(&conf.ES.Index, "esindex", "proxy", "")
+	flag.StringVar(&conf.ES.Type, "estype", "log", "")
 
 	flag.Usage = usage
 	err := flag.Parse()

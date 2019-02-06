@@ -152,8 +152,8 @@ func (s *HTTP) Serve(c net.Conn) {
 
 	// GET http://example.com/a/index.htm HTTP/1.1 -->
 	// GET /a/index.htm HTTP/1.1
-	u.Scheme = ""
-	u.Host = ""
+	//u.Scheme = ""
+	//u.Host = ""
 	uri := u.String()
 
 	var reqBuf bytes.Buffer
@@ -192,7 +192,18 @@ func (s *HTTP) Serve(c net.Conn) {
 	writeFirstLine(&respBuf, proto, code, status)
 	writeHeaders(&respBuf, respHeader)
 
-	log.F("[http] %s <-> %s", c.RemoteAddr(), tgt)
+	log.ESLog(map[string]interface{}{
+		"Proxy":           "http",
+		"time_rfc3339":    time.Now().Format(time.RFC3339),
+		"Source":          c.RemoteAddr(),
+		"Target":          tgt,
+		"method":          method,
+		"requestURI":      requestURI,
+		"request_head":    reqHeader,
+		"response_head":   respHeader,
+		"response_status": code,
+	})
+	log.F("[http] %s <-> %s, %s", c.RemoteAddr(), tgt)
 	c.Write(respBuf.Bytes())
 
 	io.Copy(c, respR)

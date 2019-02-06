@@ -34,6 +34,7 @@ const VERSION = "0.6.11"
 func main() {
 	// read configs
 	confInit()
+	log.InitESLogger(conf.ES.URL, conf.ES.Index, conf.ES.Type)
 
 	// setup a log func
 	log.F = func(f string, v ...interface{}) {
