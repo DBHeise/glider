@@ -5,7 +5,7 @@ package ipset
 import (
 	"errors"
 
-	"github.com/nadoo/glider/rule"
+	"github.com/DBHeise/glider/rule"
 )
 
 // Manager struct

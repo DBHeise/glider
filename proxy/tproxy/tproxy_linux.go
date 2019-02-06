@@ -13,8 +13,8 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/nadoo/glider/common/log"
-	"github.com/nadoo/glider/proxy"
+	"github.com/DBHeise/glider/common/log"
+	"github.com/DBHeise/glider/proxy"
 )
 
 // TProxy struct

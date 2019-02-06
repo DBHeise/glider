@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/nadoo/glider/common/conn"
-	"github.com/nadoo/glider/common/log"
-	"github.com/nadoo/glider/proxy"
+	"github.com/DBHeise/glider/common/conn"
+	"github.com/DBHeise/glider/common/log"
+	"github.com/DBHeise/glider/proxy"
 )
 
 // UoTTun udp over tcp tunnel

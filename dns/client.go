@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/nadoo/glider/common/log"
-	"github.com/nadoo/glider/proxy"
+	"github.com/DBHeise/glider/common/log"
+	"github.com/DBHeise/glider/proxy"
 )
 
 // HandleFunc function handles the dns TypeA or TypeAAAA answer

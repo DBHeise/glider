@@ -5,9 +5,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/nadoo/glider/common/log"
-	"github.com/nadoo/glider/proxy"
-	"github.com/nadoo/glider/strategy"
+	"github.com/DBHeise/glider/common/log"
+	"github.com/DBHeise/glider/proxy"
+	"github.com/DBHeise/glider/strategy"
 )
 
 // Dialer struct

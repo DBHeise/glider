@@ -17,8 +17,8 @@ import (
 	"time"
 
 	"github.com/DBHeise/glider/common/log"
-	"github.com/nadoo/glider/common/conn"
-	"github.com/nadoo/glider/proxy"
+	"github.com/DBHeise/glider/common/conn"
+	"github.com/DBHeise/glider/proxy"
 )
 
 // HTTP struct
@@ -192,6 +192,7 @@ func (s *HTTP) Serve(c net.Conn) {
 	writeFirstLine(&respBuf, proto, code, status)
 	writeHeaders(&respBuf, respHeader)
 
+	log.F("[http] %s <-> %s, %s", c.RemoteAddr(), tgt)
 	log.ESLog(map[string]interface{}{
 		"Proxy":           "http",
 		"time_rfc3339":    time.Now().Format(time.RFC3339),
@@ -203,7 +204,6 @@ func (s *HTTP) Serve(c net.Conn) {
 		"response_head":   respHeader,
 		"response_status": code,
 	})
-	log.F("[http] %s <-> %s, %s", c.RemoteAddr(), tgt)
 	c.Write(respBuf.Bytes())
 
 	io.Copy(c, respR)

@@ -8,9 +8,9 @@ import (
 
 	"github.com/nadoo/conflag"
 
-	"github.com/nadoo/glider/dns"
-	"github.com/nadoo/glider/rule"
-	"github.com/nadoo/glider/strategy"
+	"github.com/DBHeise/glider/dns"
+	"github.com/DBHeise/glider/rule"
+	"github.com/DBHeise/glider/strategy"
 )
 
 var flag = conflag.New()

@@ -10,10 +10,10 @@ import (
 
 	"github.com/nadoo/go-shadowsocks2/core"
 
-	"github.com/nadoo/glider/common/conn"
-	"github.com/nadoo/glider/common/log"
-	"github.com/nadoo/glider/common/socks"
-	"github.com/nadoo/glider/proxy"
+	"github.com/DBHeise/glider/common/conn"
+	"github.com/DBHeise/glider/common/log"
+	"github.com/DBHeise/glider/common/socks"
+	"github.com/DBHeise/glider/proxy"
 )
 
 // SS .

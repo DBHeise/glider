@@ -11,8 +11,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/nadoo/glider/common/log"
-	"github.com/nadoo/glider/proxy"
+	"github.com/DBHeise/glider/common/log"
+	"github.com/DBHeise/glider/proxy"
 )
 
 // Checker is an interface of forwarder checker

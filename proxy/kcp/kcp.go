@@ -11,8 +11,8 @@ import (
 	kcp "github.com/xtaci/kcp-go"
 	"golang.org/x/crypto/pbkdf2"
 
-	"github.com/nadoo/glider/common/log"
-	"github.com/nadoo/glider/proxy"
+	"github.com/DBHeise/glider/common/log"
+	"github.com/DBHeise/glider/proxy"
 )
 
 // KCP struct

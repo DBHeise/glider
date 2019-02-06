@@ -6,7 +6,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/nadoo/glider/common/log"
+	"github.com/DBHeise/glider/common/log"
 )
 
 // Server interface

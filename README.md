@@ -1,9 +1,9 @@
-# [glider](https://github.com/nadoo/glider)
+# [glider](https://github.com/DBHeise/glider)
 
 [![Build Status](https://img.shields.io/travis/nadoo/glider.svg?style=flat-square)](https://travis-ci.org/nadoo/glider)
-[![Go Report Card](https://goreportcard.com/badge/github.com/nadoo/glider?style=flat-square)](https://goreportcard.com/report/github.com/nadoo/glider)
-[![GitHub tag](https://img.shields.io/github/tag/nadoo/glider.svg?style=flat-square)](https://github.com/nadoo/glider/releases)
-[![GitHub release](https://img.shields.io/github/release/nadoo/glider.svg?style=flat-square)](https://github.com/nadoo/glider/releases)
+[![Go Report Card](https://goreportcard.com/badge/github.com/DBHeise/glider?style=flat-square)](https://goreportcard.com/report/github.com/DBHeise/glider)
+[![GitHub tag](https://img.shields.io/github/tag/nadoo/glider.svg?style=flat-square)](https://github.com/DBHeise/glider/releases)
+[![GitHub release](https://img.shields.io/github/release/nadoo/glider.svg?style=flat-square)](https://github.com/DBHeise/glider/releases)
 
 glider is a forward proxy with multiple protocols support, and also a dns forwarding server with ipset management features(like dnsmasq).
 
@@ -79,12 +79,12 @@ TODO:
 
 Binary:
 
-- [https://github.com/nadoo/glider/releases](https://github.com/nadoo/glider/releases)
+- [https://github.com/DBHeise/glider/releases](https://github.com/DBHeise/glider/releases)
 
 Go Get (requires **Go 1.10+** ):
 
 ```bash
-go get -u github.com/nadoo/glider
+go get -u github.com/DBHeise/glider
 ```
 
 ArchLinux:
@@ -374,7 +374,7 @@ listen=tls://:443?cert=crtFilePath&key=keyFilePath,http://
 
 ## Service
 
-- systemd: [https://github.com/nadoo/glider/blob/master/systemd/](https://github.com/nadoo/glider/blob/master/systemd/)
+- systemd: [https://github.com/DBHeise/glider/blob/master/systemd/](https://github.com/DBHeise/glider/blob/master/systemd/)
 
 ## Links
 

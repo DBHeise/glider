@@ -7,25 +7,25 @@ import (
 	"syscall"
 
 	"github.com/DBHeise/glider/common/log"
-	"github.com/nadoo/glider/dns"
-	"github.com/nadoo/glider/ipset"
-	"github.com/nadoo/glider/proxy"
-	"github.com/nadoo/glider/rule"
-	"github.com/nadoo/glider/strategy"
+	"github.com/DBHeise/glider/dns"
+	"github.com/DBHeise/glider/ipset"
+	"github.com/DBHeise/glider/proxy"
+	"github.com/DBHeise/glider/rule"
+	"github.com/DBHeise/glider/strategy"
 
-	_ "github.com/nadoo/glider/proxy/http"
-	_ "github.com/nadoo/glider/proxy/kcp"
-	_ "github.com/nadoo/glider/proxy/mixed"
-	_ "github.com/nadoo/glider/proxy/obfs"
-	_ "github.com/nadoo/glider/proxy/socks5"
-	_ "github.com/nadoo/glider/proxy/ss"
-	_ "github.com/nadoo/glider/proxy/ssr"
-	_ "github.com/nadoo/glider/proxy/tcptun"
-	_ "github.com/nadoo/glider/proxy/tls"
-	_ "github.com/nadoo/glider/proxy/udptun"
-	_ "github.com/nadoo/glider/proxy/uottun"
-	_ "github.com/nadoo/glider/proxy/vmess"
-	_ "github.com/nadoo/glider/proxy/ws"
+	_ "github.com/DBHeise/glider/proxy/http"
+	_ "github.com/DBHeise/glider/proxy/kcp"
+	_ "github.com/DBHeise/glider/proxy/mixed"
+	_ "github.com/DBHeise/glider/proxy/obfs"
+	_ "github.com/DBHeise/glider/proxy/socks5"
+	_ "github.com/DBHeise/glider/proxy/ss"
+	_ "github.com/DBHeise/glider/proxy/ssr"
+	_ "github.com/DBHeise/glider/proxy/tcptun"
+	_ "github.com/DBHeise/glider/proxy/tls"
+	_ "github.com/DBHeise/glider/proxy/udptun"
+	_ "github.com/DBHeise/glider/proxy/uottun"
+	_ "github.com/DBHeise/glider/proxy/vmess"
+	_ "github.com/DBHeise/glider/proxy/ws"
 )
 
 // VERSION .
@@ -38,9 +38,9 @@ func main() {
 
 	// setup a log func
 	log.F = func(f string, v ...interface{}) {
-		if conf.Verbose {
-			stdlog.Printf(f, v...)
-		}
+		//if conf.Verbose {
+		stdlog.Printf(f, v...)
+		//}
 	}
 
 	// global rule dialer

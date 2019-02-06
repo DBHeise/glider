@@ -3,5 +3,5 @@
 package main
 
 import (
-	_ "github.com/nadoo/glider/proxy/tproxy"
+	_ "github.com/DBHeise/glider/proxy/tproxy"
 )

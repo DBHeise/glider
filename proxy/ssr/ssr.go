@@ -12,9 +12,9 @@ import (
 	"github.com/sun8911879/shadowsocksR/protocol"
 	"github.com/sun8911879/shadowsocksR/ssr"
 
-	"github.com/nadoo/glider/common/log"
-	"github.com/nadoo/glider/common/socks"
-	"github.com/nadoo/glider/proxy"
+	"github.com/DBHeise/glider/common/log"
+	"github.com/DBHeise/glider/common/socks"
+	"github.com/DBHeise/glider/proxy"
 )
 
 // SSR .
