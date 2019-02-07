@@ -16,8 +16,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/DBHeise/glider/common/log"
 	"github.com/DBHeise/glider/common/conn"
+	"github.com/DBHeise/glider/common/log"
 	"github.com/DBHeise/glider/proxy"
 )
 
@@ -215,13 +215,19 @@ func (s *HTTP) servHTTPS(method, requestURI, proto string, c net.Conn) {
 	if err != nil {
 		c.Write([]byte(proto))
 		c.Write([]byte(" 502 ERROR\r\n\r\n"))
-		log.F("[http] failed to dial: %v", err)
+		log.F("[https] failed to dial: %v", err)
 		return
 	}
 
 	c.Write([]byte("HTTP/1.1 200 Connection established\r\n\r\n"))
 
-	log.F("[http] %s <-> %s [c]", c.RemoteAddr(), requestURI)
+	log.F("[https] %s <-> %s [c]", c.RemoteAddr(), requestURI)
+	log.ESLog(map[string]interface{}{
+		"Proxy":        "https",
+		"time_rfc3339": time.Now().Format(time.RFC3339),
+		"Source":       c.RemoteAddr(),
+		"requestURI":   requestURI,
+	})
 
 	_, _, err = conn.Relay(c, rc)
 	if err != nil {
